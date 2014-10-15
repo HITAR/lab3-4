@@ -37,7 +37,7 @@
     <td><%= student.finalscore %>%</td>
     <td><%= student.labscore %>%</td>
     <td><%= student.classscore %>%</td>
-    <td><%= student.projectscore + student.finalscore + student.labscore + student.classscore %>%</td>
+    <td><%= student.final %>%</td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -47,4 +47,4 @@
 
 <br />
 <div class="lk"><%= link_to 'New Student', new_student_path %></div>
-<div class="lk"><%= will_paginate @students, :previous_label => 'Prev', :next_label => 'Next' %></div>
+<div class="lk"><%= will_paginate @students, previous_label: 'Prev', next_label: 'Next' %></div>

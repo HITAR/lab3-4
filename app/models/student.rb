@@ -15,4 +15,9 @@ class Student < ActiveRecord::Base
   validates :finalscore,   numericality: { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 40 }
   validates :labscore,     numericality: { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 10 }
   validates :classscore,   numericality: { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 10 }
+
+  def final
+    projectscore + finalscore + labscore + classscore
+  end
+
 end
