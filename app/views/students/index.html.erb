@@ -1,39 +1,44 @@
 <h1>Grading Worksheet</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Student ID</th>
-      <th>Student Name<br />(Chinese)</th>
-      <th>Nick Name<br />(English)</th>
-      <th>Project(40%)</th>
-      <th>Fina(40%)</th>
-      <th>Lab(10%)</th>
-      <th>Class(10%)</th>
-      <th>Final</th>
-      <th></th>
-    </tr>
-  </thead>
+<div id="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Student Name<br />(Chinese)</th>
+        <th>Nick Name<br />(English)</th>
+        <th>Project(40%)</th>
+        <th>Fina(40%)</th>
+        <th>Lab(10%)</th>
+        <th>Class(10%)</th>
+        <th>Final</th>
+        <th></th>
+      </tr>
+    </thead>
 
-<% @students.each do |student| %>
-  <tr>
-    <td><%= student.studentid %></td>
-    <td><%= student.studentname %></td>
-    <td><%= student.nickname %></td>
-    <td><%= student.projectscore %>%</td>
-    <td><%= student.finalscore %>%</td>
-    <td><%= student.labscore %>%</td>
-    <td><%= student.classscore %>%</td>
-    <td><%= student.final %>%</td>
-    <td>
-      <%= link_to 'Show', student %>
-      <%= link_to 'Edit', edit_student_path(student) %>
-      <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </td>
-  </tr>
-<% end %>
-</table>
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.studentid %></td>
+          <td><%= student.studentname %></td>
+          <td><%= student.nickname %></td>
+          <td><%= student.projectscore %>%</td>
+          <td><%= student.finalscore %>%</td>
+          <td><%= student.labscore %>%</td>
+          <td><%= student.classscore %>%</td>
+          <td><%= student.final %>%</td>
+          <td>
+            <%= link_to 'Show', student %>
+            <%= link_to 'Edit', edit_student_path(student) %>
+            <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<br />
+  <div class="lk"><button id="new">New Student</button></div>
+
 <div class="lk"><%= link_to 'New Student', new_student_path %></div>
 <div class="lk"><%= will_paginate @students, previous_label: 'Prev', next_label: 'Next' %></div>
+</div>
