@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  studentid: 1
+  studentname: MyString
+  nickname: MyString
+  projectscore: 1
+  finalscore: 1
+  labscore: 1
+  classscore: 1
+
+two:
+  studentid: 1
+  studentname: MyString
+  nickname: MyString
+  projectscore: 1
+  finalscore: 1
+  labscore: 1
+  classscore: 1
