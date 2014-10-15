@@ -6,25 +6,33 @@ body {
   line-height: 18px;
 }
 
-h1
-{
-text-align: center;
+h1 {
+  text-align: center;
 }
 
-table
-{
-margin-left: auto;
-margin-right: auto;
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
 }
 
-th
-{
-text-align: left;
+th {
+  text-align: left;
+  vertical-align: top;
 }
 
-.lk
-{
-text-align: center;
+tr, th {
+  min-width: 110px;
+}
+
+thead {
+  border-top: 2px solid blue;
+  border-bottom: 2px solid blue;
+  padding: 2px;
+}
+
+.lk {
+  text-align: center;
 }
 
 p, ol, ul, td {

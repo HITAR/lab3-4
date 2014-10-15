@@ -1,32 +1,19 @@
 <h1>Grading Worksheet</h1>
 
-<table frame="hsides">
-  <tr>
-    <th>Student&nbspID&nbsp</th>
-    <th>Student&nbspName&nbsp</th>
-    <th>Nick&nbspName&nbsp</th>
-    <th>Project(40%)&nbsp</th>
-    <th>Final(40%)&nbsp</th>
-    <th>Lab(10%)&nbsp</th>
-    <th>Class(10%)&nbsp</th>
-    <th>Final&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-  </tr>
-  <tr>
-    <th>&nbsp</th>
-    <th>(Chinese)</th>
-    <th>(English)</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-    <th>&nbsp</th>
-  </tr>
+<table>
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Student Name<br />(Chinese)</th>
+      <th>Nick Name<br />(English)</th>
+      <th>Project(40%)</th>
+      <th>Fina(40%)</th>
+      <th>Lab(10%)</th>
+      <th>Class(10%)</th>
+      <th>Final</th>
+      <th></th>
+    </tr>
+  </thead>
 
 <% @students.each do |student| %>
   <tr>
@@ -38,9 +25,11 @@
     <td><%= student.labscore %>%</td>
     <td><%= student.classscore %>%</td>
     <td><%= student.final %>%</td>
-    <td><%= link_to 'Show', student %></td>
-    <td><%= link_to 'Edit', edit_student_path(student) %></td>
-    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+      <%= link_to 'Show', student %>
+      <%= link_to 'Edit', edit_student_path(student) %>
+      <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
   </tr>
 <% end %>
 </table>
