@@ -37,7 +37,9 @@
     </tbody>
   </table>
 
-  <div class="lk"><button id="new">New Student</button></div>
+  <div class="lk">
+    <button type="button" id="new" class="btn btn-primary btn-lg">New Score</button>
+  </div>
 
 <div class="lk"><%= link_to 'New Student', new_student_path %></div>
 <div class="lk"><%= will_paginate @students, previous_label: 'Prev', next_label: 'Next' %></div>
